@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f2f5;
+      font-size: 20px;
+    }
+    h1 {
+      width: 1000px;
+      text-align: center;
+      font-size: 26px;
+    }
+    .form_box {
+      margin-bottom: 40px;
+      margin-top: 40px;
+      padding: 30px;
+      width: 700px;
+      background: white;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .row {
+      margin-top: 20px;
+    }
+    .criteria {
+      margin-bottom: 10px;
+    }
+    .submit {
+      margin-top: 35px;
+      font-size: 16px;
+      width: 150px;
+      font-weight: 550;
+      color: #333;
+      background-color: white;
+      height: 35px;
+      border: 1px solid #333;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>HỆ CHUYÊN GIA LỰA CHỌN ỨNG VIÊN ĐỂ ĐÀO TẠO THÀNH TUYỂN THỦ BỘ MÔN THỂ THAO ĐIỆN TỬ LIÊN QUÂN</h1>
+  <form class="form_box">
+    <h2 style="text-align: center;">Thông tin ứng viên</h2>
+    <div class="row">
+      <div class="criteria">1. Danh hiệu hiện tại</div>
+      <div>
+        <input type="radio" id="1_current_rank" name="current_rank" value="1">
+        <label for="1_current_rank">Dưới Chiến tướng 80*</label>
+      </div>
+      <div>
+        <input type="radio" id="2_current_rank" name="current_rank" value="2">
+        <label for="2_current_rank">Chiến tướng 80* - 129*</label>
+      </div>
+      <div>
+        <input type="radio" id="3_current_rank" name="current_rank" value="3">
+        <label for="3_current_rank">Chiến tướng 130* trở lên hoặc thách đấu</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="criteria">2. Danh hiệu cao nhất</div>
+      <div>
+        <input type="radio" id="1_highest_rank" name="highest_rank" value="1">
+        <label for="1_highest_rank">Dưới Chiến tướng 80*</label>
+      </div>
+      <div>
+        <input type="radio" id="2_highest_rank" name="highest_rank" value="2">
+        <label for="2_highest_rank">Chiến tướng 80* - 129*</label>
+      </div>
+      <div>
+        <input type="radio" id="3_highest_rank" name="highest_rank" value="3">
+        <label for="3_highest_rank">Chiến tướng 130* trở lên hoặc thách đấu</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="criteria">3. Số lượng tướng tủ</div>
+      <div>
+        <input type="radio" id="1_favourite_champ" name="favourite_champ" value="1">
+        <label for="1_favourite_champ">1 - 3</label>
+      </div>
+      <div>
+        <input type="radio" id="2_favourite_champ" name="favourite_champ" value="2">
+        <label for="2_favourite_champ">4 - 6</label>
+      </div>
+      <div>
+        <input type="radio" id="3_favourite_champ" name="favourite_champ" value="3">
+        <label for="3_favourite_champ">7 - 10</label>
+      </div>
+      <div>
+        <input type="radio" id="4_favourite_champ" name="favourite_champ" value="4">
+        <label for="4_favourite_champ">> 10</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="criteria">4. Số vị trí sở trường</div>
+      <div>
+        <input type="radio" id="1_favourite_position" name="favourite_position" value="1">
+        <label for="1_favourite_position">1</label>
+      </div>
+      <div>
+        <input type="radio" id="2_favourite_position" name="favourite_position" value="2">
+        <label for="2_favourite_position">2</label>
+      </div>
+      <div>
+        <input type="radio" id="3_favourite_position" name="favourite_position" value="3">
+        <label for="3_favourite_position">> 2</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="criteria">5. Số trận chơi cùng bạn bè</div>
+      <div>
+        <input type="radio" id="1_play_with_friend" name="play_with_friend" value="1">
+        <label for="1_play_with_friend">Trên 40% số trận chơi cùng nhóm bạn bè</label>
+      </div>
+      <div>
+        <input type="radio" id="2_play_with_friend" name="play_with_friend" value="2">
+        <label for="2_play_with_friend">26% - 40% số trận chơi cùng nhóm bạn bè</label>
+      </div>
+      <div>
+        <input type="radio" id="3_play_with_friend" name="play_with_friend" value="3">
+        <label for="3_play_with_friend">Dưới 25% số trận chơi cùng nhóm bạn bè</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="criteria">6. Kinh nghiệm đối với bộ môn</div>
+      <div>
+        <input type="radio" id="1_experience" name="experience" value="1">
+        <label for="1_experience">1 - 2 năm</label>
+      </div>
+      <div>
+        <input type="radio" id="2_experience" name="experience" value="2">
+        <label for="2_experience">3 - 5 năm</label>
+      </div>
+      <div>
+        <input type="radio" id="3_experience" name="experience" value="3">
+        <label for="3_experience">Từng tham gia giải đấu bán chuyên</label>
+      </div>
+      <div>
+        <input type="radio" id="4_experience" name="experience" value="4">
+        <label for="4_experience">Từng tham gia giải đấu chuyên nghiệp</label>
+      </div>
+    </div>
+    <div class="submit" onclick="handleSubmit()">Xác nhận</div>
+  </form>
+
+
+  <script>
+    //h -> rank hien tai
+    //c -> rank cao nhat
+    //s -> so tuong tu
+    //p -> so vi tri so truong
+    //f -> so tran voi ban be
+    //e -> kinh nghiem
+    //R -> rank tier
+    //B -> flexibility tier
+    let currentRank, highestRank, numberOfFavouriteChamps, numberOfFavouritePositions, percentagePlayWithFriends, experience
+    let result 
+
+    function greaterOrEqual(a, b) {
+      return a >= b
+    }
+
+    function handleSubmit() {
+      getCurrentRankValue()
+      getHighestRankValue()
+      getNumberOfFavouriteChamps()
+      getNumberOfFavouritePositions()
+      getMatchesPlayWithFriend()
+      getExperience()
+
+      if (currentRank == -1 || highestRank == -1 || numberOfFavouriteChamps == -1 || numberOfFavouritePositions == -1 || percentagePlayWithFriends == -1 || experience == -1) {
+        alert('Người dùng phải nhập hết các trường')
+        return
+      }
+
+      if (currentRank > highestRank) {
+        alert('Thứ hạng hiện tại phải nhỏ hơn hoặc bằng thứ hạng cao nhất')
+        return
+      }
+
+      if (rankTier() == 1 || flexibilityTier() == 1 || percentagePlayWithFriends == 1) {
+        result = 1
+      }
+
+      if (experience == 1 && rankTier() == 3 && flexibilityTier() == 3 && percentagePlayWithFriends == 3) {
+        result = 2  
+      } else if (experience == 2 && rankTier() == 3 && flexibilityTier() == 2 && percentagePlayWithFriends == 3) {
+        result = 2
+      } else if (experience == 2 && rankTier() == 3 && flexibilityTier() == 3 && percentagePlayWithFriends == 2) {
+        result = 2
+      } else if (experience == 2 && rankTier() == 3 && flexibilityTier() == 3 && percentagePlayWithFriends == 3) {
+        result = 3
+      } else if (experience == 3 && rankTier() == 2 && flexibilityTier() == 2) {
+        result = 2
+      } else if (experience == 3 && rankTier() == 3 && flexibilityTier() == 2) {
+        result = 2
+      } else if (experience == 3 && rankTier() == 3 && flexibilityTier() == 3) {
+        result = 3
+      } else if (experience == 4 && rankTier() == 2 && flexibilityTier() == 2) {
+        result = 2
+      } else if (experience == 4 && rankTier() == 2 && flexibilityTier() == 3) {
+        result = 3
+      } else if (experience == 4 && rankTier() == 3) {
+        result = 3
+      } else {
+        result = 1
+      }
+
+      if (result == 1) {
+        alert('Không chọn')
+      } else if (result == 2) {
+        alert('Có thể đào tạo bán chuyên')
+      } else if (result == 3) {
+        alert('Có thể đào tạo chuyên nghiệp')
+      }
+    }
+
+    function rankTier() {
+      if (currentRank === 1 || highestRank === 1) {
+        return 1
+      } else if (currentRank == 2 && highestRank == 2) {
+        return 1
+      } else if (currentRank == 2 && highestRank == 3) {
+        return 2
+      } else if (currentRank == 3 && highestRank == 3) {
+        return 3
+      } else {
+        return 1
+      }
+    }
+
+    function flexibilityTier() {
+      if (numberOfFavouriteChamps == 1 || numberOfFavouritePositions == 1) {
+        return 1
+      } else if (numberOfFavouriteChamps == 2 && numberOfFavouritePositions == 2) {
+        return 1
+      } else if (numberOfFavouriteChamps == 2 && numberOfFavouritePositions == 3) {
+        return 2
+      } else if (numberOfFavouriteChamps == 3 && numberOfFavouritePositions == 2) {
+        return 2
+      } else if (numberOfFavouriteChamps == 3 && numberOfFavouritePositions == 3) {
+        return 3
+      } else if (numberOfFavouriteChamps == 4) {
+        return 3
+      } else return 1
+    }
+    
+    function getCurrentRankValue() {
+      let currentRankArr = document.getElementsByName('current_rank')
+      for (let i = 0; i < currentRankArr.length; i++) {
+        if (currentRankArr[i].checked) {
+          currentRank = currentRankArr[i].value
+          return
+        }
+      }  
+      currentRank = -1
+    }
+
+    function getHighestRankValue() {
+      let highestRankArr = document.getElementsByName('highest_rank')
+      for (let i = 0; i < highestRankArr.length; i++) {
+        if (highestRankArr[i].checked) {
+          highestRank = highestRankArr[i].value
+          return
+        }
+      }  
+      highestRank = -1
+    }
+
+    function getNumberOfFavouriteChamps() {
+      let favouriteChamps = document.getElementsByName('favourite_champ')
+      for (let i = 0; i < favouriteChamps.length; i++) {
+        if (favouriteChamps[i].checked) {
+          numberOfFavouriteChamps = favouriteChamps[i].value
+          return
+        }
+      }  
+      numberOfFavouriteChamps = -1
+    }
+
+    function getNumberOfFavouritePositions() {
+      let favouritePositions = document.getElementsByName('favourite_position')
+      for (let i = 0; i < favouritePositions.length; i++) {
+        if (favouritePositions[i].checked) {
+          numberOfFavouritePositions = favouritePositions[i].value
+          return
+        }
+      }  
+      numberOfFavouritePositions = -1
+    }
+
+    function getMatchesPlayWithFriend() {
+      let playWithFriends = document.getElementsByName('play_with_friend')
+      for (let i = 0; i < playWithFriends.length; i++) {
+        if (playWithFriends[i].checked) {
+          percentagePlayWithFriends = playWithFriends[i].value
+          return
+        }
+      }  
+      percentagePlayWithFriends = -1
+    }
+
+    function getExperience() {
+      let experienceHtml = document.getElementsByName('experience')
+      for (let i = 0; i < experienceHtml.length; i++) {
+        if (experienceHtml[i].checked) {
+          experience = experienceHtml[i].value
+          return
+        }
+      }  
+      experience = -1
+    }
+    
+
+  </script>
+</body>
+</html>
