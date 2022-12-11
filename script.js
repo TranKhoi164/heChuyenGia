@@ -209,26 +209,22 @@ submitButton.addEventListener('click', () => {
   const playWithFriends = answerList[6]
 
   if (currentTest == 3 && answerList[2] > answerList[3]) {
-    alert('Danh hiệu hiện tại cần nhỏ hơn hoặc bằng danh hiệu cao nhất')
+    result(0)
     return
   }
 
-  if ((currentTest == 3 && rankTier() == 'a') || (currentTest == 5 && flexibilityTier() == 'a') || (currentTest == 6 && playWithFriends == 'a')) {
+  if ((currentTest == 3 && rankTier() == 'a' && experience == 'c') || (currentTest == 5 && flexibilityTier() == 'a' && experience == 'c')) {
+    result(0)
+    return
+  }
+
+  if ((currentTest == 1 && experience == 'a') || (currentTest == 3 && rankTier() == 'a') || (currentTest == 5 && flexibilityTier() == 'a') || (currentTest == 6 && playWithFriends == 'a')) {
     result(1)
     return
   }
 
-  if (experience=='a' && currentTest==6) {
-    if (rankTier()=='c' && flexibilityTier()=='c' && playWithFriends=='c') {
-      result(2)
-      return
-    } else {
-      result(1)
-      return
-    }
-  }
   if (experience=='b' && currentTest==6) {
-    if ((rankTier()=='c' && flexibilityTier()=='b' && playWithFriends=='c') || (rankTier() == 'c' && flexibilityTier()=='c' && playWithFriends=='b')) {
+    if ((rankTier()=='c' && flexibilityTier()=='c' && playWithFriends=='b') || (rankTier() == 'c' && flexibilityTier()=='b' && playWithFriends=='c') || (rankTier() == 'b' && flexibilityTier()=='c' && playWithFriends=='c')) {
       result(2)
       return
     } else if (rankTier()=='c' && flexibilityTier()=='c' && playWithFriends=='c') {
@@ -251,16 +247,8 @@ submitButton.addEventListener('click', () => {
   }
 
   if (experience=='d') {
-    if (rankTier()=='b' && flexibilityTier()=='b' && (playWithFriends=='b' || playWithFriends=='c') && currentTest==6) {
-      result(2)
-      return
-    } else if (rankTier()=='b' && flexibilityTier()=='c' && currentTest==5) {
-      result(3)
-      return
-    } else if (rankTier()=='c' && currentTest==3) {
-      result(3)
-      return
-    } 
+    result(3)
+    return
   }
 
   currentTest++
@@ -269,7 +257,9 @@ submitButton.addEventListener('click', () => {
 
 
 function result(n) {
-  if (n == 1) {
+  if (n == 0) { 
+    alert('Thông tin cung cấp không hợp lệ')
+  } else if (n == 1) {
     alert('Ứng viên không đủ tiêu chuẩn')
   } else if (n == 2) {
     alert('Ứng viên có thể được chọn để đào tạo bán chuyên')
